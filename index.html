@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substituição de Imagens com :checked</title>
+    <style>
+        body{
+            background-image: url(fundo.jpg);
+            background-repeat: no-repeat; /*não repetir a imagem*/
+            background-size: cover; /* tamanho da tela */
+            text-align: center;
+        }
+        /* imagem para cursor */
+        img:hover{
+            cursor: pointer;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .image-container img {
+            display: block;
+            width: 200px;
+            height: auto;
+        }
+
+        /* Estilizando o input checkbox */
+        .image-container input[type="checkbox"] {
+            display: none; /* Oculta o checkbox */
+        }
+
+        /* Estilo para a imagem alternativa (oculta inicialmente) */
+        .image-container .img-back {
+            display: none;
+        }
+
+        /* Exibindo a imagem alternativa quando o checkbox está marcado */
+        .image-container input[type="checkbox"]:checked + label .img-back {
+            display: block;
+        }
+
+        /* Ocultando a imagem original quando o checkbox está marcado */
+        .image-container input[type="checkbox"]:checked + label .img-front {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abra as facas com cuidado (abra clicando nela)</h1>
+    <!-- Primeiro conjunto de imagens -->
+    <div class="image-container">
+        <input type="checkbox" id="toggle1">
+        <label for="toggle1">
+            <img src="Faca1.jpg" alt="Imagem 1" class="img-front">
+            <img src="FacaA1.jpg" alt="Imagem A1" class="img-back">
+        </label>
+    </div>
+
+    <!-- Segundo conjunto de imagens -->
+    <div class="image-container">
+        <input type="checkbox" id="toggle2">
+        <label for="toggle2">
+            <img src="Faca2.jpg" alt="Imagem 2" class="img-front">
+            <img src="FacaA2.jpg" alt="Imagem A2" class="img-back">
+        </label>
+    </div>
+
+    <!-- Terceiro conjunto de imagens -->
+    <div class="image-container">
+        <input type="checkbox" id="toggle3">
+        <label for="toggle3">
+            <img src="Faca3.jpg" alt="Imagem 3" class="img-front">
+            <img src="FacaA3.jpg" alt="Imagem A3" class="img-back">
+        </label>
+    </div>
+
+    <!-- Quarto conjunto de imagens -->
+    <div class="image-container">
+        <input type="checkbox" id="toggle4">
+        <label for="toggle4">
+            <img src="Faca4.jpg" alt="Imagem 4" class="img-front">
+            <img src="FacaA4.jpg" alt="Imagem A4" class="img-back">
+        </label>
+    </div>
+
+    <!-- Quinto conjunto de imagens -->
+    <div class="image-container">
+        <input type="checkbox" id="toggle5">
+        <label for="toggle5">
+            <img src="Faca5.jpg" alt="Imagem 5" class="img-front">
+            <img src="FacaA5.jpg" alt="Imagem A5" class="img-back">
+        </label>
+    </div>
+    <h1>Abra as facas com cuidado (abra clicando nela)</h1>
+</body>
+</html>
